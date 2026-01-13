@@ -1,0 +1,15 @@
+.btn-buy {
+    background-color: #d63384; /* Bold pink for style and strength */
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-buy:hover {
+    background-color: #c2185b; /* Slightly darker on hover */
+  }
