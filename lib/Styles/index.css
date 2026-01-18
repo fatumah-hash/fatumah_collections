@@ -59,3 +59,16 @@ body{
     background: white;
     color: black;
 }
+
+nav {
+  margin-top: 10px;
+}
+nav a {
+  margin: 0 15px;
+  color:red;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  text-decoration: underline;
+}
