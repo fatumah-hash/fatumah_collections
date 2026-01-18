@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <title>FATUMAH COLLECTIONS UGANDA</title>
   <link rel="stylesheet" href="index.css">
+  
+<script type="text/javascript">
+function displaymessage()
+{
+alert("THE QUESTIONS ARE DONE, GO HOME");
+}
+</script>
+
 </head>
 <body>
   <header>
@@ -42,10 +50,14 @@
         <img src="images/shoe.jpg" alt="BEST SHOES EVER">
         <h3>BEST SHOES EVER</h3>
         <p>Step into comfort and style with every stride.</p>
-        <button class="btn-buy">BUY NOW</button>
+<form>
+<input type="button" value="BUY NOW!"
+onclick="displaymessage()" >
+</form>    
       </div> 
     </div>
    </section>
+   
    <section id="about">
     <h2>About Fatumah Collections</h2>
     <p>We bring confidence, style, and sisterhood through Nickers, bags, shoes, and more.</p>
@@ -53,8 +65,8 @@
 
   <section id="testimonials">
     <h2>What Our Customers Say</h2>
-    <blockquote>“The best socks I’ve ever worn — soft and stylish!”</blockquote>
-    <blockquote>“Faurnah bags make me feel elegant every day.”</blockquote>
+    <blockquote>“The best innerwear, soft and stylish!”</blockquote>
+    <blockquote>“Fatumah bags make me feel elegant every day.”</blockquote>
   </section>
 
   <section id="contact">
@@ -69,7 +81,7 @@
   </section>
 
   <footer>
-    <p>© 2026 Faurnah Collections</p>
+    <p>© 2026 Fatumah Collections</p>
     <p>Follow us on: 
       <a href="http://tiktok.com/@nekesafatumah">TikTok</a>
     </p>  
@@ -81,7 +93,7 @@
       const email = document.getElementById("email").value;
       const message = document.getElementById("message").value;
     
-      const fullMessage = `Hello Fatumah Collections, my name is ${name}. My email is ${email}. I’d like to: ${message}`;
+      const fullMessage = `Hello Fatumah Collections, my name is ${name}. My email is ${email}.${message}`;
       const encodedMessage = encodeURIComponent(fullMessage);
       const phoneNumber = "256768646749"; 
     
