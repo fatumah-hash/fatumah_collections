@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <title>FATUMAH friends 10% discount referral Program</title>
+    <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+    <header>
+      <h1>FATUMAH COLLECTIONS UGANDA</h1>
+    <nav>
+        <a href="index.html">Home</a></li>
+        <a href="products.html">Products</a></li>
+        <a href="about.html">About Us</a></li>
+        <a href="contact.html">Contact</a></li>
+        <a href="referral.html">Refer to earn</a></li>
+    </nav>
+    </header>
+
+    <section id="referral">
+        <h2>FATUMAH FRIENDS REFERRAL PROGRAM</h2>
+        <p>Share the style, earn the smile! 
+            invite your friends to shop at fatumah Collections
+            when they buy, you Earn <strong>10% reward</strong> on their purchase.</p>
+        
+        <h3>How It Works:</h3>
+        <ol>
+            <li>Copy your referral link below.</li>
+            <li>Send it to your friends via whatsapp, Tiktoke, or Email.</li>
+            <li>when your friend friend makes a purchase, they enter your refereral code</li>.
+            <li>you earn 10% reward discount,cashback, or credit for your next order</li>
+        </ol>
+        <h4>Your Referral Code:</h3>
+        <div class="referral-box">
+            <input type="text" value="http://fatumah-hash.github.io/fatumah_collections/?ref=yourname" readonly>
+            <button onclick="copyLink()">Copy Link</button>
+        </div>
+
+        <h5> Friend's Order Form</h5>
+        <form action="https://wa.me/256768646749" method="get" target="_blank">
+            <label> your name:</label><input type="text" name="your_name" required><br>
+            <label> product:</label><input type="text" name="product" required><br>
+            <label> quantity:</label><input type="number" name="quantity" required><br>
+            <label> referral code:</label><input type="text" name="referral_code" required><br>
+            <button type="submit">Submit Order</button>
+       
+        <p>Start sharing and saving today! Thank you for being a valued member of the Fatumah Collections community.</p>
+        <script>
+            function copyLink() {
+                const referralInput = document.querySelector('.referral-box input');
+                referralInput.select();
+                referralInput.setSelectionRange(0, 99999);
+                document.execCommand('copy');
+                alert('Referral link copied to clipboard!');
+            }
+        </script>
+    </section>
+    </body>
+</html>
+</html>
