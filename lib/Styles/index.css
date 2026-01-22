@@ -153,3 +153,24 @@ margin-bottom: 0.5em;
     border-radius: 5px;
     font-size: 0.9em;
   }
+
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #FF1493;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 1.3s ease;
+  }
+
+  .btn:hover {
+    background-color: #ff5ca9;
+    transform: scale(1.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+   
+  .btn:active {
+    transform: scale(0.95);
+  }
