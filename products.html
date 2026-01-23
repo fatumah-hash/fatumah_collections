@@ -186,8 +186,8 @@
          <span style="font-size:24px; cursor:pointer;" onclick="closeReferralModal()">&times;</span>
        </div>
        <p>Enter your name to earn 5% commission when your friends buy!</p>
-       <input type="text" id="referrerNameInput" placeholder="Your Name" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
-       <button class="btn" style="width:100%; background-color:#25D366; border-color:#25D366;" onclick="finalizeShare()">Share on WhatsApp</button>
+       <input type="text" id="referrerNameInput" placeholder="Your Name" oninput="updateShareLink()" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+       <a id="whatsappShareLink" class="btn" style="display:block; text-align:center; text-decoration:none; width:100%; background-color:#25D366; border-color:#25D366;" target="_blank" onclick="closeReferralModal()">Share on WhatsApp</a>
      </div>
    </div>
 
@@ -379,13 +379,14 @@
       
       // Open Modal instead of prompt
       document.getElementById('referralModal').style.display = 'flex';
+      updateShareLink(); // Initialize link immediately
     }
 
     function closeReferralModal() {
       document.getElementById('referralModal').style.display = 'none';
     }
 
-    function finalizeShare() {
+    function updateShareLink() {
       const referrerName = document.getElementById('referrerNameInput').value;
       let url = "https://fatumah-hash.github.io/fatumahcollections/products.html";
       
@@ -394,8 +395,8 @@
       }
       
       const message = `Check out this ${currentProductToShare.name} for only ${currentProductToShare.price} at Fatumah Collections!\n${url}`;
-      window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank");
-      closeReferralModal();
+      const whatsappUrl = `https://wa.me/?text=${encodeURIComponent(message)}`;
+      document.getElementById('whatsappShareLink').href = whatsappUrl;
     }
 
     // --- Toast Notification Logic ---
