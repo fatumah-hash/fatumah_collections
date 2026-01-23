@@ -173,6 +173,20 @@
          <p id="referrer-info" style="color: #25D366; font-weight: bold; margin-bottom: 10px; display: none;"></p>
          <input type="text" id="customerName" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
          <input type="text" id="customerAddress" placeholder="Delivery Address / Location" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+         
+         <label for="paymentMethod" style="display:block; margin-top:10px; font-weight:bold; margin-bottom:5px;">Payment Method:</label>
+         <select id="paymentMethod" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;" onchange="togglePaymentDetails()">
+            <option value="Mobile Money">Mobile Money (MTN/Airtel)</option>
+         </select>
+         
+         <div id="momo-details" style="display:block; background:#f9f9f9; padding:10px; border-radius:5px; border:1px solid #eee; margin-bottom:10px; font-size:0.9em;">
+            <p style="margin:0 0 5px 0;"><strong>Pay to:</strong></p>
+            <div style="display:flex; align-items:center; justify-content:space-between;">
+              <span>MTN: 0768 646 749 (Fatumah)</span>
+              <button type="button" onclick="copyPhoneNumber()" style="background-color:#FF1493; color:white; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; font-size:12px;">Copy</button>
+            </div>
+            <input type="text" id="transactionId" placeholder="Enter Transaction ID (if paid)" style="width: 100%; padding: 8px; margin-top: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+         </div>
        </div>
        <button class="btn" style="width:100%; margin-top:15px; background-color:#25D366; border-color:#25D366;" onclick="checkoutWhatsApp()">Checkout on WhatsApp</button>
      </div>
@@ -336,6 +350,18 @@
       }
     }
 
+    function togglePaymentDetails() {
+      const method = document.getElementById('paymentMethod').value;
+      const details = document.getElementById('momo-details');
+      details.style.display = method === 'Mobile Money' ? 'block' : 'none';
+    }
+
+    function copyPhoneNumber() {
+      navigator.clipboard.writeText("0768646749").then(() => {
+        showToast("Phone Number Copied!");
+      });
+    }
+
     function checkoutWhatsApp() {
       if (cart.length === 0) return showToast("Your cart is empty!");
 
@@ -346,10 +372,18 @@
         return showToast("Please enter Name & Address!");
       }
       
+      const paymentMethod = document.getElementById('paymentMethod').value;
+      const transactionId = document.getElementById('transactionId').value;
+      
       // Check for referrer
       const referrer = localStorage.getItem('fatumahReferrer');
 
-      let message = `*NEW ORDER*\n\n*Customer Name:* ${name}\n*Delivery Location:* ${address}\n`;
+      let message = `*NEW ORDER*\n\n*Customer Name:* ${name}\n*Delivery Location:* ${address}\n*Payment Method:* ${paymentMethod}\n`;
+      
+      if (transactionId) {
+        message += `*Transaction ID:* ${transactionId} (Payment Made)\n`;
+      }
+
       if (referrer) {
         message += `*Referred By:* ${referrer} (5% Commission Due)\n`;
       }
