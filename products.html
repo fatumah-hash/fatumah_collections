@@ -5,6 +5,12 @@
     <link rel="stylesheet" href="lib/Styles/index.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="Products - Fatumah Collections">
+    <meta property="og:description" content="Shop the best Innerwear, Bags, and Shoes in Uganda.">
+    <meta property="og:image" content="https://fatumah-hash.github.io/fatumah_collections/images/logo1.jpg">
+    <meta property="og:url" content="https://fatumah-hash.github.io/fatumah_collections/products.html">
+    <link rel="icon" href="images/logo4.png.jpg">
 </head>
 <header>
     <div class="sale-banner">
@@ -205,8 +211,56 @@
      </div>
    </div>
 
+   <!-- Review Modal -->
+   <div class="cart-modal" id="reviewModal">
+     <div class="cart-modal-content">
+       <div style="display:flex; justify-content:space-between; align-items:center;">
+         <h2>Write a Review</h2>
+         <span style="font-size:24px; cursor:pointer;" onclick="closeReviewModal()">&times;</span>
+       </div>
+       <input type="text" id="reviewName" placeholder="Your Name" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+       <select id="reviewRating" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+          <option value="5">★★★★★ (Excellent)</option>
+          <option value="4">★★★★☆ (Good)</option>
+          <option value="3">★★★☆☆ (Average)</option>
+          <option value="2">★★☆☆☆ (Fair)</option>
+          <option value="1">★☆☆☆☆ (Poor)</option>
+       </select>
+       <textarea id="reviewText" placeholder="Describe your experience..." rows="4" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;"></textarea>
+       <button class="btn" style="width:100%; background-color:#25D366; border-color:#25D366;" onclick="submitReview()">Send Review via WhatsApp</button>
+     </div>
+   </div>
+
+   <!-- Reviews Display Section -->
+   <section class="reviews-section">
+     <h2>Customer Reviews</h2>
+     <div class="reviews-grid">
+       <div class="review-card">
+         <div class="stars">★★★★★</div>
+         <p>"I love the quality of the bags! Delivery was super fast within Kampala."</p>
+         <span style="font-weight:bold; color:#555; display:block; margin-top:10px;">- Sarah K.</span>
+       </div>
+       <div class="review-card">
+         <div class="stars">★★★★☆</div>
+         <p>"The innerwear is very soft and comfortable. Highly recommend."</p>
+         <span style="font-weight:bold; color:#555; display:block; margin-top:10px;">- Brenda M.</span>
+       </div>
+       <div class="review-card">
+         <div class="stars">★★★★★</div>
+         <p>"Affordable prices and great customer service. Thank you Fatumah!"</p>
+         <span style="font-weight:bold; color:#555; display:block; margin-top:10px;">- Joy L.</span>
+       </div>
+     </div>
+     <button class="btn" onclick="openReviewModal()">Write a Review</button>
+   </section>
+
    <!-- Toast Notification Container -->
    <div id="toast"></div>
+
+   <!-- Back to Top Button -->
+   <button onclick="topFunction()" id="backToTopBtn" title="Go to top">
+     <i class="fa-solid fa-arrow-up"></i>
+   </button>
 
    <script>
     const searchForm = document.querySelector('.search-form');
@@ -433,12 +487,55 @@
       document.getElementById('whatsappShareLink').href = whatsappUrl;
     }
 
+    // --- Review System Logic ---
+    function openReviewModal() {
+      document.getElementById('reviewModal').style.display = 'flex';
+    }
+
+    function closeReviewModal() {
+      document.getElementById('reviewModal').style.display = 'none';
+    }
+
+    function submitReview() {
+      const name = document.getElementById('reviewName').value;
+      const rating = document.getElementById('reviewRating').value;
+      const text = document.getElementById('reviewText').value;
+      
+      if(!name || !text) return showToast("Please fill in all fields");
+
+      const message = `*NEW CUSTOMER REVIEW*\n\n*Name:* ${name}\n*Rating:* ${rating} Stars\n*Review:* ${text}`;
+      const phoneNumber = "256768646749";
+      
+      window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+      
+      closeReviewModal();
+      showToast("Review sent! Thank you.");
+    }
+
     // --- Toast Notification Logic ---
     function showToast(message) {
       const toast = document.getElementById("toast");
       toast.innerText = message;
       toast.className = "show";
       setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+    }
+
+    // --- Back to Top Button Logic ---
+    const mybutton = document.getElementById("backToTopBtn");
+
+    window.onscroll = function() { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 200 || document.documentElement.scrollTop > 200) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    function topFunction() {
+      document.body.scrollTop = 0; // For Safari
+      document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
     }
   </script>
 

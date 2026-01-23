@@ -694,3 +694,73 @@ margin-bottom: 0.5em;
     box-shadow: 0 2px 5px rgba(0,0,0,0.2);
     margin-bottom: 15px;
   }
+
+  #sale-timer {
+    font-family: 'Courier New', monospace;
+    background-color: rgba(0,0,0,0.2);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-left: 5px;
+  }
+
+  /* --- Reviews Section --- */
+  .reviews-section {
+    padding: 40px 20px;
+    background-color: #fff;
+    text-align: center;
+    border-top: 2px solid #ffe6f0;
+    margin-top: 20px;
+  }
+
+  .reviews-section h2 {
+    color: #FF1493;
+    margin-bottom: 30px;
+  }
+
+  .reviews-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto 30px auto;
+  }
+
+  .review-card {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    text-align: left;
+    border-left: 4px solid #FF1493;
+  }
+
+  .stars {
+    color: #FFD700; /* Gold color for stars */
+    font-size: 1.2em;
+    margin-bottom: 10px;
+  }
+
+  /* --- Back to Top Button --- */
+  #backToTopBtn {
+    display: none; /* Hidden by default */
+    position: fixed;
+    bottom: 30px;
+    left: 30px; /* Left side to avoid Cart on the right */
+    z-index: 99;
+    font-size: 18px;
+    border: none;
+    outline: none;
+    background-color: #FF1493;
+    color: white;
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background-color 0.3s, transform 0.3s;
+  }
+
+  #backToTopBtn:hover {
+    background-color: #ff5ca9;
+    transform: scale(1.1);
+  }

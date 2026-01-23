@@ -97,7 +97,7 @@
     <h2>Stay In The Loop</h2>
     <p>Subscribe to our newsletter for the latest collections, sales, and more!</p>
     <form action="#" class="newsletter-form">
-      <input type="email" placeholder="Enter your email..." required>
+      <input type="text" id="subscriberInput" placeholder="Enter Email or WhatsApp Number..." required>
       <button type="submit" class="btn">Subscribe</button>
     </form>
   </section>
@@ -120,7 +120,11 @@
     const newsletterForm = document.querySelector('.newsletter-form');
     newsletterForm.addEventListener('submit', function(event) {
       event.preventDefault();
-      alert("Thank you for subscribing! We'll keep you updated.");
+      const contact = document.getElementById('subscriberInput').value;
+      const message = `Hello, I would like to subscribe to Fatumah Collections updates.\nMy Contact: ${contact}`;
+      const phoneNumber = "256768646749";
+      
+      window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
       newsletterForm.reset();
     });
 
