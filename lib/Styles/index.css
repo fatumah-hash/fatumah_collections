@@ -183,3 +183,323 @@ margin-bottom: 0.5em;
   .btn:active {
     transform: scale(0.95);
   }
+
+
+  .search-form {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  .search-form input {
+    padding: 12px 15px;
+    width: 300px; 
+    border: 2px solid #FF1493; 
+    border-radius: 5px 0 0 5px;
+    outline: none;
+    font-size: 16px;
+  }
+
+  .search-form button {
+    padding: 12px 20px;
+    background-color: #FF1493; 
+    border: 2px solid #FF1493;
+    color: white;
+    font-size: 16px;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+  }
+
+  .search-form button:hover {
+    background-color: #ff5ca9;
+    border-color: #ff5ca9;
+  }
+
+  /* --- New Advanced Styles --- */
+
+  /* Featured Collections Section */
+  .featured-collections {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  .featured-collections h2 {
+    color: #FF1493;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .collection-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .collection-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    height: 350px;
+    transition: transform 0.3s ease;
+  }
+
+  .collection-card:hover {
+    transform: translateY(-5px);
+  }
+
+  .collection-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+  }
+
+  .collection-card:hover img {
+    transform: scale(1.1);
+  }
+
+  .collection-card .overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(to top, rgba(255, 20, 147, 0.9), transparent);
+    padding: 30px 20px;
+    box-sizing: border-box;
+    color: white;
+    text-align: left;
+  }
+
+  .btn-small {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 20px;
+    background-color: white;
+    color: #FF1493;
+    text-decoration: none;
+    border-radius: 20px;
+    font-weight: bold;
+    font-size: 0.9em;
+  }
+
+  /* Why Choose Us Section */
+  .why-choose-us {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 60px 20px;
+    background-color: #ffe6f0;
+  }
+
+  .feature-item {
+    flex: 1;
+    min-width: 250px;
+    max-width: 350px;
+    background: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    border-bottom: 4px solid #FF1493;
+  }
+
+  .feature-item h3 {
+    color: #FF1493;
+    margin-bottom: 15px;
+    font-size: 1.4em;
+  }
+
+  /* Testimonials Section */
+  .testimonials {
+    padding: 60px 20px;
+    background-color: #fff;
+    text-align: center;
+  }
+
+  .testimonials h2 {
+    color: #FF1493;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+  }
+
+  .testimonial-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+
+  .testimonial-card {
+    background: #ffe6f0;
+    padding: 30px;
+    border-radius: 10px;
+    border-left: 5px solid #FF1493;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: left;
+  }
+
+  .testimonial-card p {
+    font-style: italic;
+    color: #555;
+    margin-bottom: 15px;
+  }
+
+  .testimonial-card span {
+    font-weight: bold;
+    color: #FF1493;
+  }
+
+  /* Newsletter Signup Section */
+  .newsletter-signup {
+    padding: 60px 20px;
+    background-color: #ffe6f0;
+    text-align: center;
+  }
+
+  .newsletter-signup h2 {
+    color: #FF1493;
+    font-size: 2.2em;
+    margin-bottom: 10px;
+  }
+
+  .newsletter-form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+
+  .newsletter-form input {
+    padding: 15px;
+    width: 350px;
+    max-width: 100%;
+    border: 2px solid #FF1493;
+    border-radius: 5px;
+    font-size: 1em;
+  }
+
+  .newsletter-form .btn {
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .footer-content .contact-info {
+    margin-top: 15px;
+  }
+
+  /* --- Contact & About Page Styles --- */
+
+  .page-header {
+    background-color: #ffe6f0;
+    padding: 40px 20px;
+    text-align: center;
+    border-bottom: 2px solid #FF1493;
+  }
+
+  .page-header h2 {
+    color: #FF1493;
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+
+  /* Contact Page */
+  .contact-container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+
+  .contact-info-cards {
+    flex: 1;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .info-card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    text-align: center;
+    border: 1px solid #ffe6f0;
+  }
+
+  .info-card i {
+    font-size: 2em;
+    color: #FF1493;
+    margin-bottom: 10px;
+  }
+
+  .form-wrapper {
+    flex: 1.5;
+    min-width: 300px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  .styled-contact-form input,
+  .styled-contact-form textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  .styled-contact-form textarea {
+    resize: vertical;
+  }
+
+  /* About Page */
+  .about-content {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+  }
+
+  .story-text {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 1.1em;
+    line-height: 1.6;
+  }
+
+  .mission-vision {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  .mv-card {
+    flex: 1;
+    min-width: 250px;
+    background: #ffe6f0;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    border-top: 4px solid #FF1493;
+  }
+
+  .mv-card h3 {
+    color: #FF1493;
+    margin-bottom: 15px;
+  }
