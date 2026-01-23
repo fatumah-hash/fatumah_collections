@@ -9,8 +9,8 @@
 
   <meta property="og:title" content="STYLES FOR LADIES, HAPPINESS GUARANTEED">
   <meta property="og:description" content="STYLISH KNICKERS,EARRINGS,BAGS & MORE.">
-  <meta property="og:image" content="images/logo1.jpg">
-  <meta property="og:url" content="http://fatumah-hash.github.io/fatumahcollections/">
+  <meta property="og:image" content="https://fatumah-hash.github.io/fatumahcollections/images/logo1.jpg">
+  <meta property="og:url" content="https://fatumah-hash.github.io/fatumahcollections/">
   <link rel="icon" href="images/logo4.png.jpg">
 
 </head>
@@ -123,6 +123,14 @@
       alert("Thank you for subscribing! We'll keep you updated.");
       newsletterForm.reset();
     });
+
+    // --- Referral System: Check URL for referrer ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const refUser = urlParams.get('ref');
+    if (refUser) {
+      localStorage.setItem('fatumahReferrer', decodeURIComponent(refUser));
+      alert(`Welcome! You were referred by ${decodeURIComponent(refUser)}.`);
+    }
   </script>
   </body>
 </html>

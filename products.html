@@ -7,6 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 <header>
+    <div class="sale-banner">
+      🔥 Good New! Inivit a friend to buy and get 5% commission🔥
+    </div>
     <img src="images/logo1.jpg" alt="Fatumah Collections Logo" class="logo"/>
     <h1>FATUMAH COLLECTIONS UGANDA</h1>
   <nav>
@@ -24,69 +27,182 @@
   <body>
 <section class="products">
     <h2>FEATURED PRODUCTS</h2>
+    <div class="filter-container">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="innerwear">Innerwear</button>
+      <button class="filter-btn" data-filter="bags">Bags</button>
+      <button class="filter-btn" data-filter="shoes">Shoes</button>
+    </div>
     <div class="product-grid">
-      <div class="product-card">
+      <div class="product-card" data-category="innerwear">
         <img src="images/nick2.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>knickers Soft, colorful, and made to uplift your CONFIDENCE</h3>
         <p class="price">UGX 8,000<span class="old-price">UGX 11,000</span></p>
-        <a href="https://wa.me/256768646749?text=l%20want%20to%20order%20knickers" target="_blank" class="btn-buy">ORDER NOW</a>
+        <select class="size-selector">
+          <option value="S">Size: S</option>
+          <option value="M">Size: M</option>
+          <option value="L">Size: L</option>
+          <option value="XL">Size: XL</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="innerwear">
         <img src="images/nick2.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>knickers Soft, colorful, and made to uplift your CONFIDENCE</h3>
         <p class="price">UGX 10,000<span class="old-price">UGX 11,000</span></p>
-        <a href="https://wa.me/256768646749?text=l%20want%20to%20order%20knickers" target="_blank" class="btn-buy">ORDER NOW</a>
+        <select class="size-selector">
+          <option value="S">Size: S</option>
+          <option value="M">Size: M</option>
+          <option value="L">Size: L</option>
+          <option value="XL">Size: XL</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="innerwear">
         <img src="images/nick3.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>High Waist Tummy control knickers </h3>
         <p class="price">UGX 20,000<span class="old-price">UGX 11,000</span></p>
-        <a href="https://wa.me/256768646749?text=l%20want%20to%20order%20knickers" target="_blank" class="btn-buy">ORDER NOW</a>
+        <select class="size-selector">
+          <option value="S">Size: S</option>
+          <option value="M">Size: M</option>
+          <option value="L">Size: L</option>
+          <option value="XL">Size: XL</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="innerwear">
         <img src="images/nick4.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>Cotton Knickers</h3>
         <p class="price">UGX 8,000<span class="old-price">UGX 11,000</span></p>
-        <a href="https://wa.me/256768646749?text=l%20want%20to%20order%20knickers" target="_blank" class="btn-buy">ORDER NOW</a>
+        <select class="size-selector">
+          <option value="S">Size: S</option>
+          <option value="M">Size: M</option>
+          <option value="L">Size: L</option>
+          <option value="XL">Size: XL</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="innerwear">
         <img src="images/nick5.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>seamless High Waist knickers</h3>
         <p class="price">UGX 8,000<span class="old-price">UGX 11,000</span></p>
-        <a href="https://wa.me/256768646749?text=l%20want%20to%20order%20knickers" target="_blank" class="btn-buy">ORDER NOW</a>
+        <select class="size-selector">
+          <option value="S">Size: S</option>
+          <option value="M">Size: M</option>
+          <option value="L">Size: L</option>
+          <option value="XL">Size: XL</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
       </div>
 
-      <div class="product-card">
+      <div class="product-card" data-category="bags">
         <span class="discount">-10%</span>
         <img src="images/bag.jpg" alt="STYLISH BAG">
         <h3>Stylish Bag Carry your dreams with elegance and strength</h3>
         <p class="price">UGX 30,000<span class="old-price">UGX 55,000</span></p>
-        <a href="https://wa.me/256768646749?text=l%20want%20to%20order%20Bags" target="_blank" class="btn-buy">ORDER NOW</a>
+        <select class="size-selector">
+          <option value="One Size">One Size</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
       </div>
       
 
-      <div class="product-card">
+      <div class="product-card" data-category="shoes">
         <img src="images/shoes.jpg" alt="BEST SHOES EVER">
         <span class="discount">-15%</span>
         <h3>Men shoes. Step into comfort and style with every stride.</h3>
         <p class="price">UGX 50,000 <span class="old-price">UGX 65,000</span></p>
-        <a href="https://wa.me/256768646749?text=l%20want%20to%20order%20Shoes" target="_blank" class="btn-buy">ORDER NOW</a>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
       </div>
     </div>
    </section>
+
+   <!-- Cart Floating Icon -->
+   <div class="cart-float" onclick="toggleCart()">
+     <i class="fa-solid fa-cart-shopping"></i>
+     <span class="cart-count">0</span>
+   </div>
+
+   <!-- Cart Modal -->
+   <div class="cart-modal" id="cartModal">
+     <div class="cart-modal-content">
+       <div style="display:flex; justify-content:space-between; align-items:center;">
+         <h2>Your Cart</h2>
+         <span style="font-size:24px; cursor:pointer;" onclick="toggleCart()">&times;</span>
+       </div>
+       <div id="cartItems"></div>
+       <div class="cart-total">Total: UGX <span id="cartTotal">0</span></div>
+       <div style="margin-top: 15px;">
+         <p id="referrer-info" style="color: #25D366; font-weight: bold; margin-bottom: 10px; display: none;"></p>
+         <input type="text" id="customerName" placeholder="Your Name" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+         <input type="text" id="customerAddress" placeholder="Delivery Address / Location" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+       </div>
+       <button class="btn" style="width:100%; margin-top:15px; background-color:#25D366; border-color:#25D366;" onclick="checkoutWhatsApp()">Checkout on WhatsApp</button>
+     </div>
+   </div>
+
+   <!-- Toast Notification Container -->
+   <div id="toast"></div>
+
    <script>
     const searchForm = document.querySelector('.search-form');
     const products = document.querySelectorAll('.product-card');
     const errorMessage = document.querySelector('.error-message');
+    const filterBtns = document.querySelectorAll('.filter-btn');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        
+        const filterValue = btn.getAttribute('data-filter');
+        
+        products.forEach(product => {
+          if (filterValue === 'all' || product.getAttribute('data-category') === filterValue) {
+            product.style.display = 'block';
+          } else {
+            product.style.display = 'none';
+          }
+        });
+      });
+    });
   
     searchForm.addEventListener('submit', function(event) {
       event.preventDefault();
@@ -109,6 +225,159 @@
         errorMessage.style.display = 'none';
       }
     });
+
+    // --- Real-time Search (Filters as you type) ---
+    searchForm.querySelector('input').addEventListener('input', function(e) {
+      const searchquery = e.target.value.toLowerCase();
+      let productFound = false;
+
+      products.forEach(function(product) {
+        const productName = product.querySelector('h3').textContent.toLowerCase();
+        if (productName.includes(searchquery)) {
+          product.style.display = 'block';
+          productFound = true;
+        } else {
+          product.style.display = 'none';
+        }
+      });
+      errorMessage.style.display = productFound ? 'none' : 'block';
+    });
+
+    // --- Shopping Cart Logic ---
+    // 1. Load cart from LocalStorage if available, otherwise start empty
+    let cart = JSON.parse(localStorage.getItem('fatumahCart')) || [];
+    
+    // 2. Update UI immediately on page load to show saved items
+    updateCartUI();
+
+    // --- Referral System: Check URL for referrer ---
+    const urlParams = new URLSearchParams(window.location.search);
+    const refUser = urlParams.get('ref');
+    if (refUser) {
+      localStorage.setItem('fatumahReferrer', decodeURIComponent(refUser));
+      showToast(`Referred by ${decodeURIComponent(refUser)}`);
+    }
+
+    function addToCart(button) {
+      const card = button.closest('.product-card');
+      const name = card.querySelector('h3').innerText;
+      const priceText = card.querySelector('.price').childNodes[0].nodeValue; // Gets "UGX 8,000"
+      const price = parseInt(priceText.replace(/[^0-9]/g, '')); // Converts to 8000
+
+      // Get selected size
+      const sizeSelect = card.querySelector('.size-selector');
+      const size = sizeSelect ? sizeSelect.value : 'Standard';
+
+      cart.push({ name, price, size });
+      saveCart(); // Save to memory
+      updateCartUI();
+      showToast(name + " added to cart!");
+    }
+
+    function removeFromCart(index) {
+      cart.splice(index, 1);
+      saveCart(); // Save to memory
+      updateCartUI();
+    }
+
+    // Helper function to save cart to browser memory
+    function saveCart() {
+      localStorage.setItem('fatumahCart', JSON.stringify(cart));
+    }
+
+    function updateCartUI() {
+      document.querySelector('.cart-count').innerText = cart.length;
+      
+      const cartItemsContainer = document.getElementById('cartItems');
+      const cartTotalElement = document.getElementById('cartTotal');
+      
+      cartItemsContainer.innerHTML = '';
+      let total = 0;
+
+      cart.forEach((item, index) => {
+        total += item.price;
+        cartItemsContainer.innerHTML += `
+          <div class="cart-item">
+            <span>${item.name} <br><small style="color:#888">Size: ${item.size}</small></span>
+            <div style="display:flex; align-items:center;">
+              <span>UGX ${item.price.toLocaleString()}</span>
+              <span class="remove-btn" onclick="removeFromCart(${index})">&times;</span>
+            </div>
+          </div>
+        `;
+      });
+
+      cartTotalElement.innerText = total.toLocaleString();
+    }
+
+    function toggleCart() {
+      const modal = document.getElementById('cartModal');
+      modal.style.display = modal.style.display === 'flex' ? 'none' : 'flex';
+
+      // Show referrer info if it exists
+      const referrer = localStorage.getItem('fatumahReferrer');
+      const refInfo = document.getElementById('referrer-info');
+      if (referrer && refInfo) {
+        refInfo.style.display = 'block';
+        refInfo.innerText = `Referred by: ${referrer}`;
+      }
+    }
+
+    function checkoutWhatsApp() {
+      if (cart.length === 0) return showToast("Your cart is empty!");
+
+      const name = document.getElementById('customerName').value;
+      const address = document.getElementById('customerAddress').value;
+
+      if (!name || !address) {
+        return showToast("Please enter Name & Address!");
+      }
+      
+      // Check for referrer
+      const referrer = localStorage.getItem('fatumahReferrer');
+
+      let message = `*NEW ORDER*\n\n*Customer Name:* ${name}\n*Delivery Location:* ${address}\n`;
+      if (referrer) {
+        message += `*Referred By:* ${referrer} (5% Commission Due)\n`;
+      }
+      message += `\n*Order Details:*\n`;
+      let total = 0;
+      
+      cart.forEach(item => {
+        message += `- ${item.name} [Size: ${item.size}] (UGX ${item.price.toLocaleString()})\n`;
+        total += item.price;
+      });
+      
+      message += `\n*Total Price: UGX ${total.toLocaleString()}*`;
+      
+      const phoneNumber = "256768646749";
+      window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
+    }
+
+    // --- Share Product Logic ---
+    function shareProduct(button) {
+      const card = button.closest('.product-card');
+      const name = card.querySelector('h3').innerText;
+      const priceText = card.querySelector('.price').childNodes[0].nodeValue.trim();
+      
+      let referrerName = prompt("Enter your name to create a referral link (Earn 5% commission!):");
+      let url = "https://fatumah-hash.github.io/fatumahcollections/";
+      
+      if (referrerName) {
+        url += `?ref=${encodeURIComponent(referrerName)}`;
+      }
+      
+      const message = `Check out this ${name} for only ${priceText} at Fatumah Collections!\n${url}`;
+      window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank");
+    }
+
+    // --- Toast Notification Logic ---
+    function showToast(message) {
+      const toast = document.getElementById("toast");
+      toast.innerText = message;
+      toast.className = "show";
+      setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);
+    }
   </script>
 
    <footer>
