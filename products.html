@@ -8,7 +8,7 @@
 </head>
 <header>
     <div class="sale-banner">
-      🔥 Good New! Inivit a friend to buy and get 5% commission🔥
+      🔥 Good News! Invite a friend to buy and get 5% commission 🔥
     </div>
     <img src="images/logo1.jpg" alt="Fatumah Collections Logo" class="logo"/>
     <h1>FATUMAH COLLECTIONS UGANDA</h1>
@@ -175,6 +175,19 @@
          <input type="text" id="customerAddress" placeholder="Delivery Address / Location" style="width: 100%; padding: 10px; margin-bottom: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
        </div>
        <button class="btn" style="width:100%; margin-top:15px; background-color:#25D366; border-color:#25D366;" onclick="checkoutWhatsApp()">Checkout on WhatsApp</button>
+     </div>
+   </div>
+
+   <!-- Referral Modal -->
+   <div class="cart-modal" id="referralModal">
+     <div class="cart-modal-content">
+       <div style="display:flex; justify-content:space-between; align-items:center;">
+         <h2>Create Referral Link</h2>
+         <span style="font-size:24px; cursor:pointer;" onclick="closeReferralModal()">&times;</span>
+       </div>
+       <p>Enter your name to earn 5% commission when your friends buy!</p>
+       <input type="text" id="referrerNameInput" placeholder="Your Name" style="width: 100%; padding: 10px; margin: 10px 0; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
+       <button class="btn" style="width:100%; background-color:#25D366; border-color:#25D366;" onclick="finalizeShare()">Share on WhatsApp</button>
      </div>
    </div>
 
@@ -355,20 +368,34 @@
     }
 
     // --- Share Product Logic ---
+    let currentProductToShare = {};
+
     function shareProduct(button) {
       const card = button.closest('.product-card');
-      const name = card.querySelector('h3').innerText;
-      const priceText = card.querySelector('.price').childNodes[0].nodeValue.trim();
+      currentProductToShare = {
+        name: card.querySelector('h3').innerText,
+        price: card.querySelector('.price').childNodes[0].nodeValue.trim()
+      };
       
-      let referrerName = prompt("Enter your name to create a referral link (Earn 5% commission!):");
-      let url = "https://fatumah-hash.github.io/fatumahcollections/";
+      // Open Modal instead of prompt
+      document.getElementById('referralModal').style.display = 'flex';
+    }
+
+    function closeReferralModal() {
+      document.getElementById('referralModal').style.display = 'none';
+    }
+
+    function finalizeShare() {
+      const referrerName = document.getElementById('referrerNameInput').value;
+      let url = "https://fatumah-hash.github.io/fatumahcollections/products.html";
       
       if (referrerName) {
         url += `?ref=${encodeURIComponent(referrerName)}`;
       }
       
-      const message = `Check out this ${name} for only ${priceText} at Fatumah Collections!\n${url}`;
+      const message = `Check out this ${currentProductToShare.name} for only ${currentProductToShare.price} at Fatumah Collections!\n${url}`;
       window.open(`https://wa.me/?text=${encodeURIComponent(message)}`, "_blank");
+      closeReferralModal();
     }
 
     // --- Toast Notification Logic ---
