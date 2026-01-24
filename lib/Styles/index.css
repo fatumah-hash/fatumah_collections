@@ -591,12 +591,28 @@ margin-bottom: 0.5em;
     box-shadow: 0 5px 15px rgba(0,0,0,0.1);
     text-align: center;
     border: 1px solid #ffe6f0;
+    text-decoration: none;
+    color: #333;
+    display: block;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    cursor: pointer;
+  }
+
+  .info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 20, 147, 0.2);
+    border-color: #FF1493;
   }
 
   .info-card i {
     font-size: 2em;
     color: #FF1493;
     margin-bottom: 10px;
+    transition: transform 0.3s ease;
+  }
+
+  .info-card:hover i {
+    transform: scale(1.2);
   }
 
   .form-wrapper {
@@ -763,4 +779,96 @@ margin-bottom: 0.5em;
   #backToTopBtn:hover {
     background-color: #ff5ca9;
     transform: scale(1.1);
+  }
+
+  /* --- Map Section --- */
+  .map-section {
+    padding: 40px 20px;
+    text-align: center;
+    background-color: #fff;
+  }
+
+  .map-section h3 {
+    color: #FF1493;
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+
+  .map-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    border: 2px solid #ffe6f0;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  /* --- FAQ Section --- */
+  .faq-section {
+    padding: 60px 20px;
+    background-color: #ffe6f0;
+    text-align: center;
+  }
+
+  .faq-section h3 {
+    color: #FF1493;
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+
+  .faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .faq-item {
+    background: #fff;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    overflow: hidden;
+  }
+
+  .faq-question {
+    width: 100%;
+    padding: 20px;
+    background: none;
+    border: none;
+    text-align: left;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+  }
+
+  .faq-question:hover {
+    background-color: #fff0f5;
+  }
+
+  .faq-question i {
+    color: #FF1493;
+    transition: transform 0.3s;
+  }
+
+  .faq-question.active i {
+    transform: rotate(180deg);
+  }
+
+  .faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    padding: 0 20px;
+    background-color: #fff;
+  }
+
+  .faq-answer p {
+    padding-bottom: 20px;
+    color: #555;
+    line-height: 1.6;
   }
