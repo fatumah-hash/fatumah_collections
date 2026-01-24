@@ -188,7 +188,7 @@
          <div id="momo-details" style="display:block; background:#f9f9f9; padding:10px; border-radius:5px; border:1px solid #eee; margin-bottom:10px; font-size:0.9em;">
             <p style="margin:0 0 5px 0;"><strong>Pay to:</strong></p>
             <div style="display:flex; align-items:center; justify-content:space-between;">
-              <span>MTN: 0768 646 749 (Fatumah)</span>
+              <span>MTN: 256 748 218 177 (Fatumah)</span>
               <button type="button" onclick="copyPhoneNumber()" style="background-color:#FF1493; color:white; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; font-size:12px;">Copy</button>
             </div>
             <input type="text" id="transactionId" placeholder="Enter Transaction ID (if paid)" style="width: 100%; padding: 8px; margin-top: 10px; border: 1px solid #ddd; border-radius: 5px; box-sizing: border-box;">
@@ -411,7 +411,7 @@
     }
 
     function copyPhoneNumber() {
-      navigator.clipboard.writeText("0768646749").then(() => {
+      navigator.clipboard.writeText("0748218177").then(() => {
         showToast("Phone Number Copied!");
       });
     }
@@ -451,7 +451,7 @@
       
       message += `\n*Total Price: UGX ${total.toLocaleString()}*`;
       
-      const phoneNumber = "256768646749";
+      const phoneNumber = "256748218177";
       window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
     }
 
@@ -504,7 +504,7 @@
       if(!name || !text) return showToast("Please fill in all fields");
 
       const message = `*NEW CUSTOMER REVIEW*\n\n*Name:* ${name}\n*Rating:* ${rating} Stars\n*Review:* ${text}`;
-      const phoneNumber = "256768646749";
+      const phoneNumber = "256748218177";
       
       window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, "_blank");
       
