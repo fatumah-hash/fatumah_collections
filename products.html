@@ -10,9 +10,10 @@
     <meta property="og:description" content="Shop the best Innerwear, Bags, and Shoes in Uganda.">
     <meta property="og:image" content="https://fatumah-hash.github.io/fatumah_collections/images/logo1.jpg">
     <meta property="og:url" content="https://fatumah-hash.github.io/fatumah_collections/products.html">
-    <link rel="icon" href="images/logo4.png.jpg">
+    <link rel="icon" href="images/logo4.jpg">
 </head>
-<header>
+<body>
+  <header>
     <div class="sale-banner">
       🔥 Good News! Invite a friend to buy and get 5% commission 🔥
     </div>
@@ -30,7 +31,6 @@
     <P class="error-message" style="display: none;">product not available or check spelling"</P>
   </form>
   </header>
-  <body>
 <section class="products">
     <h2>FEATURED PRODUCTS</h2>
     <div class="filter-container">
@@ -38,9 +38,11 @@
       <button class="filter-btn" data-filter="innerwear">Innerwear</button>
       <button class="filter-btn" data-filter="bags">Bags</button>
       <button class="filter-btn" data-filter="shoes">Shoes</button>
+      <button class="filter-btn" data-filter="Earrings">Earrings</button>
+      <button class="filter-btn" data-filter="Perfumes">Perfumes</button>
     </div>
     <div class="product-grid">
-      <div class="product-card" data-category="innerwear">
+      <div class="product-card" data-category="innerwear" id="product-1">
         <img src="images/nick2.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>knickers Soft, colorful, and made to uplift your CONFIDENCE</h3>
@@ -57,7 +59,7 @@
         </div>
       </div>
 
-      <div class="product-card" data-category="innerwear">
+      <div class="product-card" data-category="innerwear" id="product-2">
         <img src="images/nick2.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>knickers Soft, colorful, and made to uplift your CONFIDENCE</h3>
@@ -74,7 +76,7 @@
         </div>
       </div>
 
-      <div class="product-card" data-category="innerwear">
+      <div class="product-card" data-category="innerwear" id="product-3">
         <img src="images/nick3.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>High Waist Tummy control knickers </h3>
@@ -91,7 +93,7 @@
         </div>
       </div>
 
-      <div class="product-card" data-category="innerwear">
+      <div class="product-card" data-category="innerwear" id="product-4">
         <img src="images/nick4.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>Cotton Knickers</h3>
@@ -108,7 +110,7 @@
         </div>
       </div>
 
-      <div class="product-card" data-category="innerwear">
+      <div class="product-card" data-category="innerwear" id="product-5">
         <img src="images/nick5.jpg" alt="BEST INNERWEARS">
         <span class="discount">-5%</span>
         <h3>seamless High Waist knickers</h3>
@@ -125,7 +127,7 @@
         </div>
       </div>
 
-      <div class="product-card" data-category="bags">
+      <div class="product-card" data-category="bags" id="product-6">
         <span class="discount">-10%</span>
         <img src="images/bag.jpg" alt="STYLISH BAG">
         <h3>Stylish Bag Carry your dreams with elegance and strength</h3>
@@ -140,7 +142,7 @@
       </div>
       
 
-      <div class="product-card" data-category="shoes">
+      <div class="product-card" data-category="shoes" id="product-7">
         <img src="images/shoes.jpg" alt="BEST SHOES EVER">
         <span class="discount">-15%</span>
         <h3>Men shoes. Step into comfort and style with every stride.</h3>
@@ -157,8 +159,292 @@
           <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
         </div>
       </div>
+
+      <!-- New Shoe Product Placeholder 1 -->
+      <div class="product-card" data-category="shoes" id="product-8">
+        <img src="images/sh4.jpg" alt="Timberland Shoe">
+        <span class="discount">-2%</span>
+        <h3>Closed Timberland shoe (original)</h3>
+        <p class="price">UGX 85,000 <span class="old-price">UGX 105,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 2 -->
+      <div class="product-card" data-category="shoes" id="product-9">
+        <img src="images/sh7.jpg" alt="New Shoe">
+        <span class="discount">-15%</span>
+        <h3>HMRCENS Shoe For cool men</h3>
+        <p class="price">UGX 60,000 <span class="old-price">UGX 65,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 3 -->
+      <div class="product-card" data-category="shoes" id="product-10">
+        <img src="images/sh5.jpg" alt="trendy">
+        <span class="discount">0</span>
+        <h3>Trendy and Stylish</h3>
+        <p class="price">UGX 55,000 <span class="old-price">UGX 60,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 4 -->
+      <div class="product-card" data-category="shoes" id="product-11">
+        <img src="images/shoe11.jpg" alt="Y-3 original piece">
+        <span class="discount">-2%</span>
+        <h3>Y-3 original piece </h3>
+        <p class="price">UGX 90,000 <span class="old-price">UGX 100,000</span></p></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 5 -->
+      <div class="product-card" data-category="shoes" id="product-12">
+        <img src="images/sho12.jpg" alt="CEMS">
+        <span class="discount">-5%</span>
+        <h3>CEMS for men where you confidance </h3>
+        <p class="price">UGX 65,000 <span class="old-price">UGX 70,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 6 -->
+      <div class="product-card" data-category="shoes" id="product-13">
+        <img src="images/sh19.jpg" alt="Timberland">
+        <span class="discount">-15%</span>
+        <h3>Timberland/h3>
+        <p class="price">UGX 85,000 <span class="old-price">UGX 115,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 7 -->
+      <div class="product-card" data-category="shoes" id="product-14">
+        <img src="images/sh9.jpg" alt="Rock me">
+        <span class="discount">-5%</span>
+        <h3>Nike </h3>
+        <p class="price">UGX 75,000 <span class="old-price">UGX 80,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 8 -->
+      <div class="product-card" data-category="shoes" id="product-15">
+        <img src="images/sh17.jpg" alt="New Shoe">
+        <span class="discount">-5%</span>
+        <h3>Your step matters with quality and comfort</h3>
+        <p class="price">UGX 50,000 <span class="old-price">UGX 65,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 9 -->
+      <div class="product-card" data-category="shoes" id="product-16">
+        <img src="images/sh10.jpg" alt="New Shoe">
+        <span class="discount">-10%</span>
+        <h3>step into comfort and style with every stride</h3>
+        <p class="price">UGX 50,000</p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <!-- New Shoe Product Placeholder 10 -->
+      <div class="product-card" data-category="shoes" id="product-17">
+        <img src="images/sh13.jpg" alt="Rock me">
+        <span class="discount">-5%</span>
+        <h3>Nike </h3>
+        <p class="price">UGX 75,000 <span class="old-price">UGX 80,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <div class="product-card" data-category="shoes" id="product-18">
+        <img src="images/sh14.jpg" alt="Rock me">
+        <span class="discount">-5%</span>
+        <h3>Nike </h3>
+        <p class="price">UGX 75,000 <span class="old-price">UGX 80,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <div class="product-card" data-category="shoes" id="product-19">
+        <img src="images/sh15.jpg" alt="Rock me">
+        <span class="discount">-5%</span>
+        <h3>quality and comfort open shoes</h3>
+        <p class="price">UGX 75,000 <span class="old-price">UGX 80,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <div class="product-card" data-category="shoes" id="product-20">
+        <img src="images/sh8.jpg" alt="Rock me">
+        <span class="discount">-5%</span>
+        <h3>luxury Speaks by itself </h3>
+        <p class="price">UGX 75,000 <span class="old-price">UGX 80,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <div class="product-card" data-category="shoes" id="product-21">
+        <img src="images/sh1.jpg" alt="Rock me">
+        <span class="discount">-5%</span>
+        <h3>Nike </h3>
+        <p class="price">UGX 75,000 <span class="old-price">UGX 80,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <div class="product-card" data-category="shoes" id="product-22">
+        <img src="images/sh2.jpg" alt="Rock me">
+        <span class="discount">-5%</span>
+        <h3>Nike </h3>
+        <p class="price">UGX 75,000 <span class="old-price">UGX 80,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+      <div class="product-card" data-category="shoes" id="product-23">
+        <img src="images/sh3.jpg" alt="Rock me">
+        <span class="discount">-5%</span>
+        <h3>Nike </h3>
+        <p class="price">UGX 75,000 <span class="old-price">UGX 80,000</span></p>
+        <select class="size-selector">
+          <option value="39">Size: 39</option>
+          <option value="40">Size: 40</option>
+          <option value="41">Size: 41</option>
+          <option value="42">Size: 42</option>
+          <option value="43">Size: 43</option>
+        </select>
+        <div class="action-row">
+          <button class="btn" onclick="addToCart(this)">Add to Cart</button>
+          <button class="btn-share" onclick="shareProduct(this)" title="Share on WhatsApp"><i class="fa-brands fa-whatsapp"></i></button>
+        </div>
+      </div>
+
     </div>
-   </section>
+  </section>
 
    <!-- Cart Floating Icon -->
    <div class="cart-float" onclick="toggleCart()">
@@ -350,6 +636,29 @@
       showToast(`Referred by ${decodeURIComponent(refUser)}`);
     }
 
+    // --- Function to scroll to a product from URL hash ---
+    function scrollToProduct() {
+      // A short delay helps ensure all content is rendered, especially images
+      setTimeout(() => {
+        if (window.location.hash) {
+          const elementId = window.location.hash.substring(1); // remove the '#'
+          const element = document.getElementById(elementId);
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            // Add a temporary highlight effect to draw attention
+            element.style.transition = 'box-shadow 0.5s ease-in-out, transform 0.3s ease';
+            element.style.boxShadow = '0 0 25px 8px #FF1493';
+            element.style.transform = 'scale(1.02)';
+            setTimeout(() => {
+              element.style.boxShadow = '';
+              element.style.transform = '';
+            }, 3500); // Remove highlight after 3.5 seconds
+          }
+        }
+      }, 500); // 500ms delay
+    }
+    scrollToProduct(); // Run the scroll function on page load
+
     function addToCart(button) {
       const card = button.closest('.product-card');
       const name = card.querySelector('h3').innerText;
@@ -482,6 +791,7 @@
     function shareProduct(button) {
       const card = button.closest('.product-card');
       currentProductToShare = {
+        id: card.id, // Capture the product's ID
         name: card.querySelector('h3').innerText,
         price: card.querySelector('.price').childNodes[0].nodeValue.trim()
       };
@@ -501,6 +811,11 @@
       
       if (referrerName) {
         url += `?ref=${encodeURIComponent(referrerName)}`;
+      }
+      
+      // Add the product ID as a URL hash to scroll to it
+      if (currentProductToShare.id) {
+        url += `#${currentProductToShare.id}`;
       }
       
       const message = `Check out this ${currentProductToShare.name} for only ${currentProductToShare.price} at Fatumah Collections!\n${url}`;
@@ -565,6 +880,10 @@
     <p>Follow us on: 
       <a href="http://tiktok.com/@nekesafatumah">TikTok</a>
     </p>  
-</footer>`
+    <div style="margin-top: 15px;">
+      <small>Total Visits:</small><br>
+      <img src="https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Ffatumah-hash.github.io%2Ffatumah_collections%2F&count_bg=%23FF1493&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false" alt="Visitor Hits">
+    </div>
+  </footer>
 </body>
 </html>
