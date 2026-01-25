@@ -441,6 +441,24 @@ margin-bottom: 0.5em;
     font-size: 0.9em;
   }
 
+  /* Featured Products Section */
+  .featured-products {
+    padding: 60px 20px;
+    text-align: center;
+  }
+
+  .featured-products h2 {
+    color: #FF1493;
+    margin-bottom: 40px;
+    font-size: 2.5em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+  }
+
+  .view-all-container {
+    margin-top: 40px;
+  }
+
   /* Why Choose Us Section */
   .why-choose-us {
     display: flex;
@@ -467,6 +485,13 @@ margin-bottom: 0.5em;
     color: #FF1493;
     margin-bottom: 15px;
     font-size: 1.4em;
+  }
+
+  .feature-item i {
+    font-size: 2.5em;
+    color: #FF1493;
+    margin-bottom: 20px;
+    display: block;
   }
 
   /* Testimonials Section */
